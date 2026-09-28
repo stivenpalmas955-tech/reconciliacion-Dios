@@ -580,12 +580,20 @@ def logout():
 
 
 # -------------------------
+# INICIAR BASE DE DATOS
+# -------------------------
+
+crear_base_datos()
+
+
+# -------------------------
 # INICIAR SERVIDOR
 # -------------------------
 
 if __name__ == "__main__":
 
-    crear_base_datos()
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(
+        host="0.0.0.0",
+        port=5000,
+        debug=True
+    )

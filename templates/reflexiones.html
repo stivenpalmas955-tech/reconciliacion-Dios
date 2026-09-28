@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reflexiones | Reconciliación con Dios</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                Reconciliación con Dios
+            </div>
+
+            <div class="menu">
+
+              <a href="/">
+        Inicio
+    </a>
+
+    <a href="/reconciliarse">
+        ¿Cómo acercarme a Dios?
+    </a>
+
+    <a href="/reflexiones">
+        Reflexiones
+    </a>
+
+    <a href="/versiculos">
+        Versículos
+    </a>
+<a href="/plan">
+        Plan de 7 días
+    </a>
+ <a href="/oraciones">
+        Oraciones
+
+    <a href="/peticion">
+        Oración
+    </a>
+
+</div>
+
+        </nav>
+
+    </header>
+
+
+    <section class="seccion">
+
+        <div class="contenido">
+
+            <div class="icono">
+                📖
+            </div>
+
+            <h2>Reflexiones</h2>
+
+            <p>
+                Tómate un momento para leer, pensar y acercarte
+                nuevamente a Dios.
+            </p>
+
+            <br>
+
+            <a href="/reflexion-aleatoria" class="boton">
+                ✨ Dame una reflexión
+            </a>
+
+
+            <form
+                method="GET"
+                action="/reflexiones"
+                class="formulario"
+            >
+
+                <label for="buscar">
+                    🔎 Buscar una reflexión
+                </label>
+
+                <input
+                    type="text"
+                    id="buscar"
+                    name="buscar"
+                    placeholder="Ejemplo: perdón, esperanza, Dios..."
+                    value="{{ busqueda }}"
+                >
+
+                <button
+                    type="submit"
+                    class="boton"
+                >
+                    Buscar
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <div class="tarjetas">
+
+            {% if not reflexiones %}
+
+            <div class="tarjeta">
+
+                <h3>
+                    No encontramos resultados
+                </h3>
+
+                <p>
+                    No encontramos reflexiones relacionadas con
+                    "{{ busqueda }}".
+                </p>
+
+            </div>
+
+            {% endif %}
+
+
+            {% for reflexion in reflexiones %}
+
+            <div class="tarjeta">
+
+                <span>
+                    Reflexión {{ reflexion.id }}
+                </span>
+
+                <h3>
+                    {{ reflexion.titulo }}
+                </h3>
+
+                <p>
+                    {{ reflexion.texto[:120] }}...
+                </p>
+
+                <br>
+
+                <a
+                    href="/reflexion/{{ reflexion.id }}"
+                    class="boton"
+                >
+                    Leer reflexión →
+                </a>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <h3>
+            Reconciliación con Dios
+        </h3>
+
+        <p>
+            Un espacio para reflexionar, creer y comenzar nuevamente.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

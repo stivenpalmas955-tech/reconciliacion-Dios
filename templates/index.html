@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reconciliación con Dios</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     MENÚ
+========================= -->
+
+<header>
+
+    <nav>
+
+        <div class="logo">
+            Reconciliación con Dios
+        </div>
+
+
+        <button
+            class="menu-boton"
+            onclick="abrirMenu()"
+        >
+            ☰
+        </button>
+
+
+        <div class="menu">
+
+            <a href="#inicio">
+                Inicio
+            </a>
+
+            <a href="/reconciliarse">
+                ¿Cómo acercarme a Dios?
+            </a>
+
+            <a href="#reconciliacion">
+                Reconciliación
+            </a>
+
+            <a href="#camino">
+                El camino
+            </a>
+
+            <a href="#versiculo">
+                Versículo
+            </a>
+
+            <a href="/reflexiones">
+                Reflexiones
+            </a>
+
+            <a href="/versiculos">
+                Versículos
+            </a>
+
+            <a href="/plan">
+                Plan de 7 días
+            </a>
+
+            <a href="/oraciones">
+                Oraciones
+            </a>
+
+            <a href="/peticion">
+                Petición
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     PORTADA
+========================= -->
+
+<section
+    class="hero"
+    id="inicio"
+>
+
+    <div class="hero-content">
+
+        <h1>
+            Un nuevo comienzo
+        </h1>
+
+        <p>
+            No importa qué tan lejos hayas estado.
+            Siempre puedes volver a acercarte a Dios.
+        </p>
+
+        <a
+            href="#reconciliacion"
+            class="boton"
+        >
+            Comenzar
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     RECONCILIACIÓN
+========================= -->
+
+<section
+    class="seccion"
+    id="reconciliacion"
+>
+
+    <div class="contenido">
+
+        <div class="icono">
+            ✝️
+        </div>
+
+        <h2>
+            ¿Qué significa reconciliarse con Dios?
+        </h2>
+
+        <p>
+            La reconciliación con Dios significa restaurar
+            nuestra relación con Él.
+        </p>
+
+        <p>
+            Es reconocer nuestros errores, pedir perdón
+            sinceramente y decidir caminar nuevamente
+            de acuerdo con nuestra fe.
+        </p>
+
+        <p>
+            Dios siempre nos invita a acercarnos nuevamente
+            a Él y comenzar una nueva etapa.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     VERSÍCULO
+========================= -->
+
+<section
+    class="versiculo"
+    id="versiculo"
+>
+
+    <h2>
+        "{{ versiculo.texto }}"
+    </h2>
+
+    <p class="referencia">
+        {{ versiculo.referencia }}
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     CAMINO
+========================= -->
+
+<section
+    class="seccion"
+    id="camino"
+>
+
+    <div class="contenido">
+
+        <div class="icono">
+            🙏
+        </div>
+
+        <h2>
+            Un camino para acercarte a Dios
+        </h2>
+
+    </div>
+
+
+    <div class="tarjetas">
+
+        <div class="tarjeta">
+
+            <span>01</span>
+
+            <h3>
+                Reconoce
+            </h3>
+
+            <p>
+                Reconoce tus errores y reflexiona
+                sobre las decisiones que has tomado.
+            </p>
+
+        </div>
+
+
+        <div class="tarjeta">
+
+            <span>02</span>
+
+            <h3>
+                Habla con Dios
+            </h3>
+
+            <p>
+                Acércate a Dios mediante la oración
+                y habla con Él con sinceridad.
+            </p>
+
+        </div>
+
+
+        <div class="tarjeta">
+
+            <span>03</span>
+
+            <h3>
+                Pide perdón
+            </h3>
+
+            <p>
+                Pide perdón sinceramente y reconoce
+                aquello que quieres cambiar.
+            </p>
+
+        </div>
+
+
+        <div class="tarjeta">
+
+            <span>04</span>
+
+            <h3>
+                Cambia tu camino
+            </h3>
+
+            <p>
+                Decide seguir adelante buscando vivir
+                de acuerdo con los principios de tu fe.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     RECURSOS
+========================= -->
+
+<section class="seccion">
+
+    <div class="contenido">
+
+        <div class="icono">
+            ✨
+        </div>
+
+        <h2>
+            Encuentra lo que necesitas
+        </h2>
+
+        <p>
+            Explora diferentes recursos para reflexionar,
+            aprender, orar y acercarte más a Dios.
+        </p>
+
+    </div>
+
+
+    <div class="recursos">
+
+
+        <div class="recurso">
+
+            <span>
+                ❤️ COMENZAR
+            </span>
+
+            <h3>
+                ¿Cómo acercarme a Dios?
+            </h3>
+
+            <p>
+                Descubre algunos pasos que pueden ayudarte
+                a comenzar nuevamente tu camino con Dios.
+            </p>
+
+            <a
+                href="/reconciliarse"
+                class="boton"
+            >
+                Comenzar →
+            </a>
+
+        </div>
+
+
+
+        <div class="recurso">
+
+            <span>
+                🌅 CADA DÍA
+            </span>
+
+            <h3>
+                Devocional del día
+            </h3>
+
+            <p>
+                Dedica unos minutos a leer un mensaje,
+                meditar y comenzar tu día con Dios.
+            </p>
+
+            <a
+                href="/devocional"
+                class="boton"
+            >
+                Ver devocional →
+            </a>
+
+        </div>
+
+
+
+        <div class="recurso">
+
+            <span>
+                📖 REFLEXIONAR
+            </span>
+
+            <h3>
+                Reflexiones
+            </h3>
+
+            <p>
+                Lee diferentes reflexiones sobre la fe,
+                el perdón, la esperanza y la vida con Dios.
+            </p>
+
+            <a
+                href="/reflexiones"
+                class="boton"
+            >
+                Leer reflexiones →
+            </a>
+
+        </div>
+
+
+
+        <div class="recurso">
+
+            <span>
+                📚 PALABRA DE DIOS
+            </span>
+
+            <h3>
+                Versículos
+            </h3>
+
+            <p>
+                Encuentra versículos bíblicos para leer,
+                recordar y meditar durante el día.
+            </p>
+
+            <a
+                href="/versiculos"
+                class="boton"
+            >
+                Ver versículos →
+            </a>
+
+        </div>
+
+
+
+        <div class="recurso">
+
+            <span>
+                🌱 CRECER
+            </span>
+
+            <h3>
+                Plan de 7 días
+            </h3>
+
+            <p>
+                Sigue un pequeño recorrido de siete días
+                para dedicar tiempo a Dios.
+            </p>
+
+            <a
+                href="/plan"
+                class="boton"
+            >
+                Ver plan →
+            </a>
+
+        </div>
+
+
+
+        <div class="recurso">
+
+            <span>
+                🙏 HABLAR CON DIOS
+            </span>
+
+            <h3>
+                Oraciones
+            </h3>
+
+            <p>
+                Encuentra oraciones que puedes utilizar
+                como guía para hablar con Dios.
+            </p>
+
+            <a
+                href="/oraciones"
+                class="boton"
+            >
+                Ver oraciones →
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     LLAMADO FINAL
+========================= -->
+
+<section class="llamada">
+
+    <h2>
+        Un espacio para acercarte a Dios
+    </h2>
+
+    <p>
+        Tómate un momento para reflexionar,
+        orar y fortalecer tu relación con Dios.
+    </p>
+
+
+    <div class="tarjetas">
+
+
+        <div class="tarjeta">
+
+            <div class="icono">
+                📖
+            </div>
+
+            <h3>
+                Reflexiones
+            </h3>
+
+            <p>
+                Lee diferentes reflexiones que pueden
+                ayudarte a meditar sobre tu relación con Dios.
+            </p>
+
+            <a
+                href="/reflexiones"
+                class="boton"
+            >
+                Ver reflexiones
+            </a>
+
+        </div>
+
+
+
+        <div class="tarjeta">
+
+            <div class="icono">
+                🙏
+            </div>
+
+            <h3>
+                Petición de oración
+            </h3>
+
+            <p>
+                Comparte una petición de oración
+                que tengas en tu corazón.
+            </p>
+
+            <a
+                href="/peticion"
+                class="boton"
+            >
+                Hacer petición
+            </a>
+
+        </div>
+
+
+
+        <div class="tarjeta">
+
+            <div class="icono">
+                ✝️
+            </div>
+
+            <h3>
+                Volver a empezar
+            </h3>
+
+            <p>
+                Recuerda que siempre puedes buscar
+                un nuevo comienzo en tu camino de fe.
+            </p>
+
+            <a
+                href="#inicio"
+                class="boton"
+            >
+                Comenzar de nuevo
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PIE DE PÁGINA
+========================= -->
+
+<footer>
+
+    <h3>
+        Reconciliación con Dios
+    </h3>
+
+    <p>
+        Un espacio para reflexionar, creer y comenzar nuevamente.
+    </p>
+
+    <p>
+        👁️ Visitas a la página: {{ visitas }}
+    </p>
+
+    <p>
+        © 2026 - Proyecto educativo
+    </p>
+
+</footer>
+
+
+
+<script>
+
+function abrirMenu() {
+
+    document
+        .querySelector(".menu")
+        .classList
+        .toggle("mostrar");
+
+}
+
+</script>
+
+
+</body>
+
+</html>

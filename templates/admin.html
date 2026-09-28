@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Panel de administración</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                Reconciliación con Dios
+            </div>
+
+            <div class="menu">
+
+                <a href="/">Inicio</a>
+                <a href="/reflexiones">Reflexiones</a>
+                <a href="/peticion">Oración</a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <section class="seccion">
+
+        <div class="contenido">
+
+            <div class="icono">
+                🔐
+            </div>
+
+            <h2>Panel de administración</h2>
+
+            <p>
+                Aquí puedes consultar las peticiones de oración
+                recibidas.
+            </p>
+<p>
+    👁️ Visitas totales:
+    <strong>{{ visitas }}</strong>
+</p>
+        </div>
+<div class="estadisticas">
+
+    <div class="estadistica">
+        <span>📋</span>
+        <h3>{{ total }}</h3>
+        <p>Total de peticiones</p>
+    </div>
+
+    <div class="estadistica">
+        <span>⏳</span>
+        <h3>{{ pendientes }}</h3>
+        <p>Peticiones pendientes</p>
+    </div>
+
+    <div class="estadistica">
+        <span>🙏</span>
+        <h3>{{ atendidas }}</h3>
+        <p>Peticiones atendidas</p>
+    </div>
+
+</div>
+
+
+        <div class="tabla-contenedor">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>#</th>
+<th>Nombre</th>
+<th>Petición</th>
+<th>Fecha</th>
+<th>Estado</th>
+<th>Acción</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    {% for peticion in peticiones %}
+
+                    <tr>
+
+                        <td>
+                            {{ peticion[0] }}
+                        </td>
+
+                        <td>
+                            {{ peticion[1] }}
+                        </td>
+
+                        <td>
+                            {{ peticion[2] }}
+                        </td>
+<td>
+    {{ peticion[3] }}
+</td>
+
+<td>
+
+    {% if peticion[4] == "Pendiente" %}
+
+        <span class="estado estado-pendiente">
+            ⏳ Pendiente
+        </span>
+
+    {% else %}
+
+        <span class="estado estado-atendida">
+            ✓ Atendida
+        </span>
+
+    {% endif %}
+
+</td><td>
+
+   {% if peticion[4] == "Pendiente" %}
+
+<a
+    href="/atender/{{ peticion[0] }}"
+    class="boton"
+>
+    ✓ Atender
+</a>
+
+{% else %}
+
+<span>
+    ✓ Completada
+</span>
+
+{% endif %}
+
+<br><br>
+
+<a
+    href="/eliminar/{{ peticion[0] }}"
+    class="boton"
+    onclick="return confirmarEliminacion();"
+>
+    🗑 Eliminar
+</a>
+</td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <h3>
+            Reconciliación con Dios
+        </h3>
+
+        <p>
+            Panel de administración
+        </p>
+
+    </footer>
+<script>
+
+function confirmarEliminacion() {
+
+    return confirm(
+        "¿Estás seguro de que quieres eliminar esta petición?"
+    );
+
+}
+
+</script>
+</body>
+
+</html>

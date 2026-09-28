@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Devocional del día | Reconciliación con Dios</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<header>
+
+    <nav>
+
+        <div class="logo">
+            Reconciliación con Dios
+        </div>
+
+        <div class="menu">
+
+            <a href="/">
+                Inicio
+            </a>
+
+            <a href="/reconciliarse">
+                ¿Cómo acercarme a Dios?
+            </a>
+
+            <a href="/reflexiones">
+                Reflexiones
+            </a>
+
+            <a href="/versiculos">
+                Versículos
+            </a>
+
+            <a href="/plan">
+                Plan de 7 días
+            </a>
+
+            <a href="/oraciones">
+                Oraciones
+            </a>
+
+            <a href="/peticion">
+                Petición
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<section class="seccion">
+
+    <div class="contenido">
+
+        <div class="icono">
+            🌅
+        </div>
+
+        <h2>
+            Devocional del día
+        </h2>
+
+        <p>
+            Tómate unos minutos para leer, reflexionar
+            y acercarte a Dios.
+        </p>
+
+    </div>
+
+
+    <div class="tarjeta devocional">
+
+        <span>
+            DEVOCIONAL DE HOY
+        </span>
+
+        <h3>
+            {{ devocional.titulo }}
+        </h3>
+
+        <p>
+            {{ devocional.texto }}
+        </p>
+
+    </div>
+
+
+    <section class="versiculo">
+
+        <h2>
+            "{{ devocional.versiculo }}"
+        </h2>
+
+        <p class="referencia">
+            {{ devocional.referencia }}
+        </p>
+
+    </section>
+
+
+    <div class="contenido">
+
+        <div class="icono">
+            🙏
+        </div>
+
+        <h2>
+            Para pensar
+        </h2>
+
+        <p>
+            Tómate un momento para pensar cómo puedes aplicar
+            este mensaje a tu vida durante el día.
+        </p>
+
+        <br>
+
+        <a
+            href="/oraciones"
+            class="boton"
+        >
+            🙏 Ir a las oraciones
+        </a>
+
+        <br><br>
+
+        <a
+            href="/reflexiones"
+            class="boton"
+        >
+            📖 Leer reflexiones
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <h3>
+        Reconciliación con Dios
+    </h3>
+
+    <p>
+        Un espacio para reflexionar, creer y comenzar nuevamente.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

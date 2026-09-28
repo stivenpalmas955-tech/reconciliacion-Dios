@@ -1,0 +1,760 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, sans-serif;
+background: #f5f1e8;
+color: #26343b;
+}
+
+/* MENÚ */
+
+header {
+position: fixed;
+top: 0;
+width: 100%;
+background: #172b36;
+z-index: 1000;
+}
+
+nav {
+max-width: 1100px;
+margin: auto;
+padding: 18px 25px;
+
+```
+display: flex;
+justify-content: space-between;
+align-items: center;
+```
+
+}
+
+.logo {
+color: white;
+font-size: 22px;
+font-weight: bold;
+}
+
+.menu {
+display: flex;
+gap: 25px;
+}
+
+.menu a {
+color: white;
+text-decoration: none;
+}
+
+.menu a:hover {
+color: #e6c76a;
+}
+
+/* PORTADA */
+
+.hero {
+min-height: 100vh;
+
+```
+display: flex;
+justify-content: center;
+align-items: center;
+
+text-align: center;
+color: white;
+
+background:
+    linear-gradient(
+        rgba(15, 35, 45, 0.75),
+        rgba(15, 35, 45, 0.75)
+    ),
+    url("https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=2000&q=80");
+
+background-size: cover;
+background-position: center;
+```
+
+}
+
+.hero-content {
+max-width: 800px;
+padding: 30px;
+}
+
+.hero h1 {
+font-size: 80px;
+line-height: 1;
+margin-bottom: 25px;
+}
+
+.hero p {
+font-size: 20px;
+line-height: 1.7;
+margin-bottom: 30px;
+}
+
+/* BOTONES */
+
+.boton {
+display: inline-block;
+
+```
+padding: 15px 30px;
+
+background: #e6c76a;
+color: #172b36;
+
+border-radius: 30px;
+
+text-decoration: none;
+font-weight: bold;
+
+transition: 0.3s;
+```
+
+}
+
+.boton:hover {
+transform: translateY(-4px);
+}
+
+/* SECCIONES */
+
+.seccion {
+padding: 100px 30px;
+text-align: center;
+}
+
+.contenido {
+max-width: 800px;
+margin: auto;
+}
+
+.icono {
+font-size: 55px;
+margin-bottom: 20px;
+}
+
+.seccion h2 {
+font-size: 40px;
+margin-bottom: 25px;
+}
+
+.seccion p {
+font-size: 18px;
+line-height: 1.8;
+margin-bottom: 15px;
+}
+
+/* VERSÍCULO */
+
+.versiculo {
+padding: 100px 30px;
+
+```
+text-align: center;
+
+color: white;
+
+background: #172b36;
+```
+
+}
+
+.versiculo h2 {
+max-width: 800px;
+
+```
+margin: auto;
+
+font-size: 30px;
+
+line-height: 1.6;
+```
+
+}
+
+.referencia {
+color: #e6c76a;
+margin-top: 25px;
+}
+
+/* TARJETAS */
+
+.tarjetas {
+max-width: 1100px;
+
+```
+margin: 50px auto 0;
+
+display: grid;
+
+grid-template-columns: repeat(4, 1fr);
+
+gap: 20px;
+```
+
+}
+
+.tarjeta {
+background: white;
+
+```
+padding: 30px 20px;
+
+border-radius: 15px;
+
+box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.08);
+
+transition: 0.3s;
+```
+
+}
+
+.tarjeta:hover {
+transform: translateY(-8px);
+}
+
+.tarjeta span {
+color: #b28b2e;
+font-weight: bold;
+}
+
+.tarjeta h3 {
+margin: 15px 0;
+font-size: 22px;
+}
+
+.tarjeta p {
+color: #666;
+line-height: 1.6;
+}
+
+/* LLAMADA FINAL */
+
+.llamada {
+padding: 100px 30px;
+
+```
+text-align: center;
+
+background: #e8dfce;
+```
+
+}
+
+.llamada h2 {
+font-size: 40px;
+margin-bottom: 20px;
+}
+
+.llamada p {
+font-size: 18px;
+margin-bottom: 30px;
+}
+
+/* FOOTER */
+
+footer {
+background: #172b36;
+
+```
+color: white;
+
+text-align: center;
+
+padding: 50px 20px;
+```
+
+}
+
+footer p {
+margin-top: 10px;
+color: #c7d0d4;
+}
+
+/* CELULARES */
+
+@media (max-width: 800px) {
+
+```
+nav {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 55px;
+}
+
+.tarjetas {
+    grid-template-columns: 1fr 1fr;
+}
+```
+
+}
+
+@media (max-width: 500px) {
+
+```
+.tarjetas {
+    grid-template-columns: 1fr;
+}
+
+.hero h1 {
+    font-size: 45px;
+}
+
+.seccion h2,
+.llamada h2 {
+    font-size: 32px;
+}
+```
+
+}
+/* -------------------------
+   FORMULARIOS
+------------------------- */
+
+.formulario {
+    max-width: 650px;
+    margin: 50px auto 0;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 25px;
+    border: 1px solid #d5d5d5;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    outline: none;
+    border-color: #b28b2e;
+}
+
+.formulario .boton {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+/* -------------------------
+   TABLA DE ADMINISTRACIÓN
+------------------------- */
+
+.tabla-contenedor {
+    max-width: 1000px;
+    margin: 50px auto 0;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+th,
+td {
+    padding: 18px;
+    text-align: left;
+    border-bottom: 1px solid #eeeeee;
+}
+
+th {
+    background: #172b36;
+    color: white;
+}
+
+td {
+    color: #444;
+    line-height: 1.5;
+}
+
+tr:hover td {
+    background: #f8f5ed;
+}
+/* -------------------------
+   MENÚ PARA CELULARES
+------------------------- */
+
+.menu-boton {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* Tablets y celulares */
+
+@media (max-width: 800px) {
+
+    nav {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu-boton {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #172b36;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+    }
+
+    .menu.mostrar {
+        display: flex;
+    }
+
+    .menu a {
+        width: 100%;
+        padding: 15px 25px;
+        text-align: center;
+    }
+
+    .menu a:hover {
+        background: #223d4a;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* -------------------------
+   ESTADÍSTICAS DEL ADMIN
+------------------------- */
+
+.estadisticas {
+    max-width: 1000px;
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.estadistica {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.estadistica:hover {
+    transform: translateY(-6px);
+}
+
+.estadistica span {
+    font-size: 40px;
+}
+
+.estadistica h3 {
+    font-size: 38px;
+    margin: 10px 0;
+    color: #172b36;
+}
+
+.estadistica p {
+    margin: 0;
+    color: #666;
+    font-size: 16px;
+}
+
+
+/* -------------------------
+   ESTADÍSTICAS EN CELULAR
+------------------------- */
+
+@media (max-width: 800px) {
+
+    .estadisticas {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+}
+/* -------------------------
+   ESTADOS DE LAS PETICIONES
+------------------------- */
+
+.estado {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.estado-pendiente {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.estado-atendida {
+    background: #d4edda;
+    color: #155724;
+}
+/* -------------------------
+   DEVOCIONAL DEL DÍA
+------------------------- */
+
+.devocional {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 45px 40px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.devocional span {
+    color: #b28b2e;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.devocional h3 {
+    font-size: 32px;
+    margin: 20px 0;
+    color: #172b36;
+}
+
+.devocional p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+}
+
+
+/* -------------------------
+   DEVOCIONAL EN CELULAR
+------------------------- */
+
+@media (max-width: 500px) {
+
+    .devocional {
+        margin: 35px 10px;
+        padding: 30px 20px;
+    }
+
+    .devocional h3 {
+        font-size: 26px;
+    }
+
+    .devocional p {
+        font-size: 16px;
+    }
+
+}
+/* -------------------------
+   TARJETAS DE RECURSOS
+------------------------- */
+
+.tarjetas {
+    max-width: 1100px;
+    margin: 50px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    justify-items: center;
+}
+
+.tarjetas .tarjeta {
+    width: 100%;
+    max-width: 340px;
+}
+
+
+/* -------------------------
+   RECURSOS EN TABLET
+------------------------- */
+
+@media (max-width: 900px) {
+
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* -------------------------
+   RECURSOS EN CELULAR
+------------------------- */
+
+@media (max-width: 600px) {
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjetas .tarjeta {
+        max-width: 400px;
+    }
+
+}
+/* -------------------------
+   RECURSOS DE LA PÁGINA
+   PRINCIPAL
+------------------------- */
+
+.recursos {
+    width: 100%;
+    max-width: 1100px;
+    margin: 50px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+
+    justify-items: stretch;
+}
+
+
+.recurso {
+    width: 100%;
+    min-height: 320px;
+
+    background: white;
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+
+.recurso:hover {
+    transform: translateY(-8px);
+}
+
+
+.recurso span {
+    color: #b28b2e;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.recurso h3 {
+    margin: 18px 0 15px;
+    font-size: 23px;
+    color: #172b36;
+}
+
+
+.recurso p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+.recurso .boton {
+    margin-top: auto;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .recursos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 700px;
+    }
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .recursos {
+        width: calc(100% - 20px);
+        margin: 40px auto 0;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .recurso {
+        width: 100%;
+        min-height: auto;
+
+        padding: 30px 22px;
+    }
+
+}

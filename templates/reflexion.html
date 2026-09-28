@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ reflexion.titulo }} | Reconciliación con Dios</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                Reconciliación con Dios
+            </div>
+
+            <div class="menu">
+
+               <div class="menu">
+
+    <a href="/">
+        Inicio
+    </a>
+
+    <a href="/reconciliarse">
+        ¿Cómo acercarme a Dios?
+    </a>
+
+    <a href="/reflexiones">
+        Reflexiones
+    </a>
+
+    <a href="/versiculos">
+        Versículos
+    </a>
+<a href="/plan">
+        Plan de 7 días
+    </a>
+ <a href="/oraciones">
+        Oraciones
+    <a href="/peticion">
+        Oración
+    </a>
+
+</div>
+
+        </nav>
+
+    </header>
+
+
+    <section class="seccion">
+
+        <div class="contenido">
+
+            <div class="icono">
+                💭
+            </div>
+
+            <h2>
+                {{ reflexion.titulo }}
+            </h2>
+
+            <p>
+                {{ reflexion.texto }}
+            </p>
+
+        </div>
+
+
+        <div class="versiculo">
+
+            <h2>
+                "{{ reflexion.versiculo }}"
+            </h2>
+
+            <p class="referencia">
+                {{ reflexion.referencia }}
+            </p>
+
+        </div>
+
+
+        <div class="contenido">
+
+            <h2>
+                Para reflexionar
+            </h2>
+
+            <p>
+                {{ reflexion.pregunta }}
+            </p>
+
+            <br>
+
+            <a href="/reflexiones" class="boton">
+                ← Volver a reflexiones
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <h3>
+            Reconciliación con Dios
+        </h3>
+
+        <p>
+            Un espacio para reflexionar, creer y comenzar nuevamente.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Petición de oración | Reconciliación con Dios</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- MENÚ -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                Reconciliación con Dios
+            </div>
+
+            <div class="menu">
+
+                <div class="menu">
+
+    <a href="/">
+        Inicio
+    </a>
+
+    <a href="/reconciliarse">
+        ¿Cómo acercarme a Dios?
+    </a>
+
+    <a href="/reflexiones">
+        Reflexiones
+    </a>
+
+    <a href="/versiculos">
+        Versículos
+    </a>
+<a href="/plan">
+        Plan de 7 días
+    </a>
+ <a href="/oraciones">
+        Oraciones
+
+    <a href="/peticion">
+        Oración
+    </a>
+
+</div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- FORMULARIO -->
+
+    <section class="seccion">
+
+        <div class="contenido">
+
+            <div class="icono">
+                🙏
+            </div>
+
+            <h2>Petición de oración</h2>
+
+            <p>
+                Si hay algo que llevas en tu corazón,
+                puedes escribirlo aquí.
+            </p>
+
+            <p>
+                Tómate un momento para expresar tu petición
+                con sinceridad.
+            </p>
+
+        </div>
+
+
+        <form method="POST" class="formulario">
+
+            <label for="nombre">
+                Tu nombre
+            </label>
+
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Escribe tu nombre"
+                required
+            >
+
+
+            <label for="peticion">
+                Tu petición
+            </label>
+
+            <textarea
+                id="peticion"
+                name="peticion"
+                placeholder="Escribe aquí tu petición de oración..."
+                rows="7"
+                required
+            ></textarea>
+
+
+            <button type="submit" class="boton">
+                Enviar petición
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+
+        <h3>
+            Reconciliación con Dios
+        </h3>
+
+        <p>
+            Un espacio para reflexionar, creer y comenzar nuevamente.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

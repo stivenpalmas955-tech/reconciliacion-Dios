@@ -31,6 +31,18 @@ def crear_base_datos():
         )
     """)
 
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS visitas (
+            id INTEGER PRIMARY KEY,
+            cantidad INTEGER DEFAULT 0
+        )
+    """)
+
+    cursor.execute("""
+        INSERT OR IGNORE INTO visitas (id, cantidad)
+        VALUES (1, 0)
+    """)
+
     columnas = cursor.execute(
         "PRAGMA table_info(peticiones)"
     ).fetchall()
@@ -62,7 +74,7 @@ def crear_base_datos():
     """)
 
     conexion.commit()
-
+    conexion.close()
     conexion.close()# -------------------------
 # PÁGINA PRINCIPAL
 # -------------------------
